@@ -15,9 +15,8 @@ The original repository with old versions of the Dashboard is [here](https://git
 This project requires [NodeJS](https://nodejs.org).
 
 ``` bash
-git clone https://github.com/tobinbradley/quality-of-life-dashboard.git dashboard
+git clone https://github.com/llawsonwork/gsoindicators.git dashboard
 cd dashboard
-git clone https://github.com/tobinbradley/mecklenburg-quality-of-life-data.git data
 npm install
 npm run build
 npm run datagen
