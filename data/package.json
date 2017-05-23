@@ -1,0 +1,29 @@
+{
+  "name": "qol-data-mecklenburg",
+  "version": "1.0.0",
+  "description": "data for the quality of life dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape ./test/*.js | tap-spec",
+    "lower-csv": "for f in metric/*.csv; do sed -i -e 's/\\(.*\\)/\\L\\1/' $f ; done",
+    "sort-csv": "for f in metric/*.csv; do sort -n -o $f $f ; done",
+    "clean-csv": "export LC_NUMERIC=C && npm run lower-csv && npm run sort-csv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobinbradley/mecklenburg-quality-of-life-data.git"
+  },
+  "author": "Tobin Bradley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tobinbradley/mecklenburg-quality-of-life-data/issues"
+  },
+  "homepage": "https://github.com/tobinbradley/mecklenburg-quality-of-life-data#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "fast-csv": "^2.2.0",
+    "lodash": "^4.16.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  }
+}
